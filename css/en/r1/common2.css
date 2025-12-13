@@ -334,9 +334,7 @@ header {
 }
 /* Tab-content
 ================================================================== */
-.tabs {
-  margin-top: 30px;
-}
+
 .tabs .tab-menu {
   padding: 0;
 }
@@ -400,7 +398,6 @@ header {
 /* Article */
 .articles article {
   margin-bottom: 15px;
-  margin-top: 50px;
 }
 .articles article .article-inner {
   background-color: #f4f4f4;
@@ -878,13 +875,12 @@ li > a:hover span {
 
 .sub-menu li > a:hover::after {
   color: var(--primary-color);
-} */
-
+} 
 .sub-menu li > a::after,
 .sub-menu-title li > a::after {
   content: "";
   display: inline-block;
-  width: 8px; /* adjust to your PNG size */
+  width: 8px; 
   height: 12px;
   margin-left: 8px;
   background: url("/images/global/arrow-black-right.png") no-repeat center;
@@ -892,11 +888,11 @@ li > a:hover span {
   vertical-align: middle;
 }
 
-/* Hover state */
+/*
 .sub-menu li > a:hover::after,
 .sub-menu-title li > a:hover::after {
   background-image: url("/images/global/arrow-red.png");
-}
+}*/
 
 /* Footer main links */
 .menu-footer li > a {
@@ -1464,6 +1460,22 @@ li > a:hover span {
   text-decoration: none;
 }
 
+.tab-item-action-footer::after {
+  content: "";
+  display: inline-block;
+  width: 15px; /* match your PNG */
+  height: 15px;
+  margin-left: 0.4rem;
+  background: url("/images/global/arrow-red.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+/* Hover state */
+.tab-item-action-footer:hover::after {
+  background-image: url("/images/global/arrow-black-right.png");
+}
+
 .tab-item-action::after {
   content: "";
   display: inline-block;
@@ -1483,4 +1495,20 @@ li > a:hover span {
 /** general **/
 .text-decoration-underline {
   text-decoration: underline;
+}
+
+.custom-hr {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background: #d9d9d9; /* light grey line */
+}
+
+.custom-hr-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%; /* control the red length */
+  background: #c40000; /* red */
 }
