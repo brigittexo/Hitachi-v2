@@ -1,0 +1,395 @@
+﻿@charset "UTF-8";
+@import url("root.css");
+/* **************************************************
+
+Name: common.css
+Description: Main CSS
+Create: 2014.02.13
+Update: 2017.03.31
+
+Copyright 2014 Hitachi, Ltd.
+
+***************************************************** */
+
+/* 1: Base Setting
+=========================================================================================== */
+
+html {
+  overflow-y: scroll;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ul li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global reset / typography defaults
+=========================================================================================== */
+
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+object,
+embed {
+  vertical-align: top;
+}
+
+hr,
+legend {
+  display: none;
+}
+
+img,
+abbr,
+acronym,
+fieldset {
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+a {
+  display: block;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+sub {
+  margin: auto 1px auto;
+  font-size: 92.2%;
+  vertical-align: -0.15em;
+  line-height: 100%;
+}
+
+sup {
+  margin: auto 1px auto;
+  font-size: 92.2%;
+  vertical-align: 0.15em;
+  line-height: 100%;
+}
+
+.ClearFix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 2: Body Setting
+=========================================================================================== */
+
+body {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black);
+  font-weight: normal;
+}
+
+h1 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+h2 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+h6 {
+  font-family: "Hitachi Sans", sans-serif;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
+}
+
+.p-20 {
+  font-size: 20px;
+}
+
+.p-18 {
+  font-size: 18px;
+}
+
+.section-m {
+  margin-bottom: 100px;
+}
+
+/* 3: Link Setting
+=========================================================================================== */
+
+a:link {
+  text-decoration: none;
+  color: #c02;
+}
+
+a:visited {
+  text-decoration: underline;
+  color: #cc0000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #cc0000;
+}
+
+a:active {
+  text-decoration: none;
+  color: #cc0000;
+}
+
+/* Grid / Container
+=========================================================================================== */
+
+.Container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.Container.full {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Only the grid row should be flex, not address/caption/cite */
+.Container-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+[class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+/* ====== Default (Mobile) - <768px ====== */
+.col-1 {
+  width: 8.3333%;
+}
+.col-2 {
+  width: 16.6667%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6667%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6667%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6667%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/* ====== Tablet (768px - 1023px) ====== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Container {
+    max-width: 720px;
+  }
+
+  .col-sm-1 {
+    width: 8.3333%;
+  }
+  .col-sm-2 {
+    width: 16.6667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.3333%;
+  }
+  .col-sm-5 {
+    width: 41.6667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.3333%;
+  }
+  .col-sm-8 {
+    width: 66.6667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.3333%;
+  }
+  .col-sm-11 {
+    width: 91.6667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+/* ====== Desktop (≥1024px) ====== */
+@media (min-width: 1024px) {
+  .Container {
+    /* max-width: 1275px; */
+    max-width: 82.8125rem;
+  }
+
+  .col-md-1 {
+    width: 8.3333%;
+  }
+  .col-md-2 {
+    width: 16.6667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.3333%;
+  }
+  .col-md-5 {
+    width: 41.6667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.3333%;
+  }
+  .col-md-8 {
+    width: 66.6667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.3333%;
+  }
+  .col-md-11 {
+    width: 91.6667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+  .section-m {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> 
+    <link rel="icon" href="images/global/favicon.png" sizes="32x32">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="Author" content="Hitachi, Ltd." />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="Air Compressor, Ink Jet Printer, Inverter, Induction Motor, Switches, Transformer, Hoist, Pumps, Blowers, Switches Circuit Breakers" name="keywords" />
+    <meta content="Industrial Components and Equipment Group (ICE) provides the most appropriate solution based on various product development, engineering, sales and after-service skills." name="description" />
+    <title>Hitachi Industrial Components &amp; Equipment</title>
+    <link rel="index" href="http://www.hitachi.com/" title="Home" />
+    <link rel="stylesheet" href="css/en/r1/common.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="css/en/r1/common2.css" type="text/css" media="screen,print" /> 
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/en/r1/slick.min.js"></script>
+    <script type="text/javascript" src="js/en/r1/script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="Container">
+                <div class="Container-row">
+                    <div class="col-6 col-md-6">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/global/Hitachi-Logo.png" alt="Hitachi" height="auto">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <ul class="header-action">
+                            <li class="languages"><a href="https://www.hitachi.com/en/global/">
+                                <img src="images/global/icon-header-web.png" alt="Region / Language" width="22px" height="auto">
+                                <span>Singapore / EN</span>
+                            </a></li>
+                            <li class="contact"><a href="https://www.hitachi.com/en/contact/">
+                                <img src="images/global/icon-header-email.png" alt="Contact Us" width="22px" height="auto">
+                                <span>Contact Us</span>
+                            </a></li>
+                            <li class="search-toggle"><a href="#">
+                                <img src="images/global/icon-header-search.png" alt="Search" width="22px" height="auto">
+                                <span>Search</span>
+                            </a></li>
+                            <li class="mobile-menu-toggle">
+                                <span class="icon-hamburger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14" aria-hidden="true" role="img"><rect x="0" y="1"  width="21" height="2" rx="1" fill="#FFFFFF"/><rect x="0" y="6"  width="21" height="2" rx="1" fill="#FFFFFF"/><rect x="0" y="11" width="21" height="2" rx="1" fill="#FFFFFF"/></svg>
+                                </span>
+                                <span class="icon-close">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" role="img"><line x1="1" y1="1" x2="13" y2="13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/></svg>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-wrap" style="display: none;">
+            <div class="search-wrap-inner">
+                <span class="close-search"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" role="img"><line x1="1" y1="1" x2="13" y2="13" stroke="#666666" stroke-width="2" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="#666666" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <form action="https://module.hitachi.com/search/RGN_INDONESIA_EN.html" method="get" accept-charset="UTF-8">
+                    <input type="hidden" name="imgsize" value="3">
+                    <input type="hidden" name="pagemax" value="10">       
+                    <input type="text" name="q" size="20" maxlength="40" accesskey="s" title="Search Keyword " placeholder="Search within www.hitachi.com" autocomplete="off" class="SearchPhrease" id="MF_form_phrase">
+                    <button class="SearchBtn" type="submit">Search</button>
+                </form>
+                <form action="https://module.hitachi.com/search/RGN_INDONESIA_EN.html" method="get" accept-charset="UTF-8">
+                    <input type="hidden" name="imgsize" value="3">
+                    <input type="hidden" name="pagemax" value="10">       
+                    <input type="text" name="q" size="20" maxlength="40" accesskey="s" title="Search Keyword " placeholder="Search within Hitachi Group" autocomplete="off" class="SearchPhrease" id="MF_form_phrase">
+                    <button class="SearchBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="Container">
+                <div class="Container-row">
+                    <div class="col-6 col-md-6">
+                        <a href="index.html" class="site-slogun"><span>Hitachi Industrial Components &amp; Equipment</span></a>
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <ul class="header-menu">
+                            <li class="menu-item mega-menu is-active">
+                                <a href="#">
+                                    <span>IoT Solutions</span>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mega-menu-panel">
+            <div class="Container">
+                <div class="Container-row tabs style-4">
+                    <div class="col-12 col-md-3 left-bg">
+                        <div class="tab-wrap">
+                            <p class="p-18"><strong>IoT Solutions</strong></p>
+                            <ul class="tab-menu">
+                                <li><a href="#" data="tab-1" class="active">Remote Crane Monitoring Solution</a></li>
+                                <li><a href="#" data="tab-2">Compressor Monitoring & Control Solution</a></li>
+                                <li><a href="#" data="tab-3">Pump Monitoring System</a></li>
+                                <li><a href="#" data="tab-4">Fertilizer Production Process Monitoring</a></li>
+                                <li><a href="#" data="tab-5">RFID Solutions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-item active" data="item-1">
+                                <p class="p-20"><a href="remote-crane-monitoring-solution.html">Remote Crane Monitoring Solution</a></p>
+                                <p>Hitachi's Crane Monitoring System delivers real-time insights and predictive maintenance through advanced IoT technology. Gain complete visibility, detect anomalies before they cause downtime, and optimize operations through a unified cloud platform. Our system integrates seamlessly with your equipment, providing critical alerts and analytics that enhance safety while maximizing efficiency and extending crane lifespan.</p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-key-featured">Key Features of Our IoT Crane Monitoring Solutions</a></p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-key-benefits">Key Benefits of Hitachi's IoT-Enabled Crane Monitoring Solutions</a></p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-top-applications">Top Applications of the Crane Monitoring System</a></p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-cranes-remote">Cranes Remote Monitoring and Preventive Maintenance Parameters</a></p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-how-the-remote">How the Remote Crane Monitoring Solution Works: A Step-by-Step Process</a></p>
+                                <p><a href="remote-crane-monitoring-solution.html#section-news-article">Explore Our Related Solutions</a></p>
+                            </div>
+                            <div class="tab-item" data="item-2">
+                                <p class="p-20"><a href="compressor-monitoring-control-solution.html">Compressor Monitoring & Control Solution</a></p>
+                                <p>Hitachi's Industrial Compressor Monitoring Solutions provide comprehensive tracking and analytics for optimal performance. Our Cloud-Based system delivers real-time insights, minimizes downtime, and maximizes energy efficiency through smart IoT-enabled management.</p>
+                                <p><a href="compressor-monitoring-control-solution.html#section-why-choose">Benefits of Hitachi's Fertilizer Plant Monitoring System</a></p>
+                                <p><a href="compressor-monitoring-control-solution.html#section-applications">Applications of the Compressor Monitoring System</a></p>
+                                <p><a href="compressor-monitoring-control-solution.html#section-how-the-compressor">How the Compressor Monitoring System Works: A Step-by-Step Process</a></p>
+                                <p><a href="compressor-monitoring-control-solution.html#section-news-article">Explore Our Related Solutions</a></p>
+                            </div>
+                            <div class="tab-item" data="item-3">
+                                <p class="p-20"><a href="pump-monitoring-system.html">Pump Monitoring System</a></p>
+                                <p>Hitachi’s pump monitoring system enhances operational reliability by integrating IoT predictive maintenance, real time data monitoring, and advanced analytics. Achieve peak performance, minimize downtime, and optimize energy consumption with predictive maintenance IoT solutions.</p>
+                                <p><a href="pump-monitoring-system.html#section-key-benefits">Key Benefits of IoT-based Pump Monitoring System</a></p>
+                                <p><a href="pump-monitoring-system.html#section-top-applications">Top Applications of An IoT-based Pump Monitoring System</a></p>
+                                <p><a href="pump-monitoring-system.html#section-pump-monitoring">Pump Monitoring System: Key Components</a></p>
+                                <p><a href="pump-monitoring-system.html#section-how-the-pump">How the Pump Monitoring System Works</a></p>
+                                <p><a href="pump-monitoring-system.html#section-news-article">Explore Our Related Solutions</a></p>
+                            </div>
+                            <div class="tab-item" data="item-4">
+                                <p class="p-20"><a href="fertilizer-production-process-monitoring.html">Fertilizer Production Process Monitoring</a></p>
+                                <p>Hitachi's smart fertilizer production monitoring solution tracks critical parameters from temperature to moisture, enabling real-time quality control and production efficiency. Our IoT-powered system delivers predictive maintenance insights, reduces downtime, and ensures regulatory compliance—all from one centralized platform.</p>
+                                <p><a href="fertilizer-production-process-monitoring.html#section-key-benefits">Benefits of Hitachi's Fertilizer Plant Monitoring System</a></p>
+                                <p><a href="fertilizer-production-process-monitoring.html#section-top-applications">Top Applications of the Fertilizer Plant Monitoring System</a></p>
+                                <p><a href="fertilizer-production-process-monitoring.html#section-how-the-fertilizer">How the Fertilizer Plant Monitoring System Works: A Step-by-Step Process</a></p>
+                                <p><a href="fertilizer-production-process-monitoring.html#section-news-article">Explore Our Related Solutions</a></p>
+                            </div>
+                            <div class="tab-item" data="item-5">
+                                <p class="p-20"><a href="rfid-solutions.html">RFID Solutions</a></p>
+                                <p>Hitachi delivers custom RFID solutions tailored to meet your unique business needs. With decades of experience in RFID consulting and implementation, we provide reliable systems that streamline operations, enhance efficiency, accuracy, and drive business success.</p>
+                                <p><a href="rfid-solutions.html#section-solution-why-choose">Applications of RFID Technology</a></p>
+                                <p><a href="rfid-solutions.html#section-solution">What Makes Up an RFID Warehouse Solution?</a></p>
+                                <p><a href="rfid-solutions.html#section-solution-deliver">How RFID Solutions Work</a></p>
+                                <p><a href="rfid-solutions.html#section-news-article">Explore Our Related Solutions</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul class="menu">
+                <li class="menu-item has-chilrent">
+                    <a href="#">Remote Crane Monitoring Solution</a>
+                    <span class="sub-arrow"></span>
+                    <ul class="sub-menu">
+                        <li><a href="remote-crane-monitoring-solution.html">Transform Your Crane Operations with IoT Intelligence</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-key-featured">Key Features of Our IoT Crane Monitoring Solutions</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-key-benefits">Key Benefits of Hitachi's IoT-Enabled Crane Monitoring Solutions</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-top-applications">Top Applications of the Crane Monitoring System</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-cranes-remote">Cranes Remote Monitoring and Preventive Maintenance Parameters</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-how-the-remote">How the Remote Crane Monitoring Solution Works: A Step-by-Step Proces</a></li>
+                        <li><a href="remote-crane-monitoring-solution.html#section-news-article">Explore Our Related Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item has-chilrent">
+                    <a href="#">Compressor Monitoring & Control Solution</a>
+                    <span class="sub-arrow"></span>
+                    <ul class="sub-menu">
+                        <li><a href="compressor-monitoring-control-solution.html">Compressor Monitoring System: Enhancing Efficiency and Reliability</a></li>
+                        <li><a href="compressor-monitoring-control-solution.html#section-why-choose">Benefits of Hitachi's Fertilizer Plant Monitoring System</a></li>
+                        <li><a href="compressor-monitoring-control-solution.html#section-applications">Applications of the Compressor Monitoring System</a></li>
+                        <li><a href="compressor-monitoring-control-solution.html#section-how-the-compressor">How the Compressor Monitoring System Works: A Step-by-Step Process</a></li>
+                        <li><a href="compressor-monitoring-control-solution.html#section-news-article">Explore Our Related Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item has-chilrent">
+                    <a href="#">Pump Monitoring System</a>
+                    <span class="sub-arrow"></span>
+                    <ul class="sub-menu">
+                        <li><a href="pump-monitoring-system.html">Optimise Pump Performance with Real-Time Monitoring</a></li>
+                        <li><a href="pump-monitoring-system.html#section-key-benefits">Key Benefits of IoT-based Pump Monitoring System</a></li>
+                        <li><a href="pump-monitoring-system.html#section-top-applications">Top Applications of An IoT-based Pump Monitoring System</a></li>
+                        <li><a href="pump-monitoring-system.html#section-pump-monitoring">Pump Monitoring System: Key Components</a></li>
+                        <li><a href="pump-monitoring-system.html#section-how-the-pump">How the Pump Monitoring System Works</a></li>
+                        <li><a href="pump-monitoring-system.html#section-news-article">Explore Our Related Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item has-chilrent">
+                    <a href="#">Fertilizer Production Process Monitoring</a>
+                    <span class="sub-arrow"></span>
+                    <ul class="sub-menu">
+                        <li><a href="fertilizer-production-process-monitoring.html">Fertilizer Plant Monitoring Systems: Optimizing Precision Agriculture</a></li>
+                        <li><a href="fertilizer-production-process-monitoring.html#section-key-benefits">Benefits of Hitachi's Fertilizer Plant Monitoring System</a></li>
+                        <li><a href="fertilizer-production-process-monitoring.html#section-top-applications">Top Applications of the Crane Monitoring System</a></li>
+                        <li><a href="fertilizer-production-process-monitoring.html#section-how-the-fertilizer">How the Fertilizer Plant Monitoring System Works: A Step-by-Step Process</a></li>
+                        <li><a href="fertilizer-production-process-monitoring.html#section-news-article">Explore Our Related Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item has-chilrent">
+                    <a href="#">RFID Solutions</a>
+                    <span class="sub-arrow"></span>
+                    <ul class="sub-menu">
+                        <li><a href="rfid-solutions.html">Smarter Inventory and Warehouse Management with RFID Solutions</a></li>
+                        <li><a href="rfid-solutions.html#section-solution-why-choose">Applications of RFID Technology</a></li>
+                        <li><a href="rfid-solutions.html#section-solution">What Makes Up an RFID Warehouse Solution?</a></li>
+                        <li><a href="rfid-solutions.html#section-solution-deliver">How RFID Solutions Work</a></li>
+                        <li><a href="rfid-solutions.html#section-news-article">Explore Our Related Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item languages">
+                    <a href="https://www.hitachi.com/en/global/">
+                        <img src="images/global/icon-header-web.png" alt="Region / Language" width="22px" height="auto">
+                        <span>Region / Language</span>
+                        <img src="images/global/arrow-black.png" alt="Arrow Image" width="14px" height="auto" class="menu-arrow-right">
+                    </a>
+                </li>
+                <li class="menu-item contact">
+                    <a href="https://www.hitachi.com/en/contact/">
+                        <img src="images/global/icon-header-email.png" alt="Contact Us" width="22px" height="auto">
+                        <span>Contact Us</span>
+                        <img src="images/global/arrow-black.png" alt="Arrow Image" width="14px" height="auto" class="menu-arrow-right">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <div id="Contents" class="Contents-noPadding">
+    	<div id="section-banner" class="section-m" style="background: url('images/home/home-banner-new-img.jpg') no-repeat center center; background-size: cover;">
+            <div class="hero-container">
+            <div class="banner-text-container">
+                <div class="banner-text">
+                    <h1>Empowering Industries with IoT Solutions</h1>
+                    <p>In a world of digital transformation, intelligent connectivity is what drives industrial excellence forward.</p>
+                    <p>It's what helps businesses prevent costly disruptions before they occur. It's what leads to optimized operations and sustainable competitive advantage.</p>
+                    <p><strong>Elevate your industrial future.</strong></p>
+                    <a href="#" class="cmp-button"><span class="cmp-button__text">Schedule a Free Consultation <img src="images/global/icon-go.png" alt="Search" width="12px" height="auto"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="section-solution" class="section-m">
+            <div class="Container">
+                <h2>Use Case Solutions: Unlock Efficiency with IoT Solutions & RFID Technologies</h2>
+                <p>From industrial machinery to warehouse operations, our cutting-edge IoT and RFID solutions empower businesses with real-time insights, remote monitoring and control, predictive analytics, and automation.</p>
+                <div class="Container-row tabs style-1">
+                    <div class="col-12 col-md-3">
+                        <ul class="tab-menu">
+                            <li><a href="#" data="tab-1" class="active">Crane Monitoring Solutions</a></li>
+                            <li><a href="#" data="tab-2">Compressor Monitoring & Control Solutions</a></li>
+                            <li><a href="#" data="tab-3">Fertilizer Process Monitoring</a></li>
+                            <li><a href="#" data="tab-4">Pump Monitoring Solutions</a></li>
+                            <li><a href="#" data="tab-5">RFID-Based Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="tab-content" style="background: #f4f4f4;">
+                            <div class="tab-item active" data="item-1">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-6">
+                                        <h3>Crane Monitoring Solutions</h3>
+                                        <p>Enhance crane safety and efficiency with IoT-powered real-time data monitoring. Reduce downtime, improve reliability, and streamline operations with our predictive maintenance technology</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li><strong>Centralized Dashboard & Management – </strong>Unified view for seamless crane monitoring and control.</li>
+                                            <li><strong>Real-Time Monitoring & Alerts – </strong>Instant notifications for potential failures, improving response time.</li>
+                                            <li><strong>Predictive Maintenance Insights – </strong>Proactive issue detection to prevent costly breakdowns.</li>
+                                            <li><strong>Secure Cloud Connectivity – </strong>Encrypted data storage and remote access for enhanced security.</li>
+                                            <li><strong>Customization – </strong>Tailored solutions to fit unique operational needs.</li>
+                                        </ul>
+                                        <p><a href="remote-crane-monitoring-solution.html" class="tab-item-action">Explore Crane Monitoring <img src="images/global/arrow-black.png" alt="Search" width="8px" height="auto"></a></p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="wrap-image"><img src="images/home/new-home-img-07.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-2">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-6">
+                                        <h3>Compressor Monitoring & Control Solutions</h3>
+                                        <p>Optimize compressor performance with intelligent monitoring and predictive analytics. Reduce energy waste and maximize uptime with IoT-enabled compressor solutions.</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li><strong>Real-Time Monitoring – </strong>Continuously track connected devices like compressors and sensors.</li>
+                                            <li><strong>Operational Insights – </strong>Analyze data on on/off cycles and load/unload durations.</li>
+                                            <li><strong>Automated Scheduling – </strong>Activate or deactivate equipment based on predefined schedules.</li>
+                                            <li><strong>Leakage Detection – </strong>Identify air leaks promptly to conserve energy.</li>
+                                            <li><strong>Energy Optimization – </strong>Enhance performance to lower energy costs.</li>
+                                            <li><strong>Proactive Maintenance Planning –  </strong>Schedule maintenance based on real-time data.</li>
+                                            <li><strong>Predictive Maintenance –  </strong>Detect and address potential issues before escalation.</li>
+                                            <li><strong>Remote Management – </strong>Monitor and control compressors remotely for efficiency</li>
+                                            <li><strong>Detailed Reporting –  </strong>Access analytics and customizable reports for data-driven decisions.</li>
+                                        </ul>
+                                        <p><a href="compressor-monitoring-control-solution.html" class="tab-item-action">Explore Compressor Monitoring <img src="images/global/arrow-black.png" alt="Search" width="8px" height="auto"></a></p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="wrap-image"><img src="images/home/home page solution img-3.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-3">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-6">
+                                        <h3>Fertilizer Process Monitoring</h3>
+                                        <p>Achieve greater control over fertilizer production with real-time monitoring and IoT-driven predictive maintenance. Ensure quality, minimize waste, and improve compliance.</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li><strong>Real-Time Quality Monitoring – </strong>Instantly detect deviations in product quality.</li>
+                                            <li><strong>Environmental Monitoring – </strong>Track key parameters like temperature, humidity, and pressure.</li>
+                                            <li><strong>Production Process Tracking – </strong>Monitor vibration levels and operational efficiency.</li>
+                                            <li><strong>Comprehensive Data Management – </strong>Collect, analyze, and store data for informed decision-making.</li>
+                                        </ul>
+                                        <p><a href="fertilizer-production-process-monitoring.html" class="tab-item-action">Explore Fertilizer Process Monitoring <img src="images/global/arrow-black.png" alt="Search" width="8px" height="auto"></a></p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="wrap-image"><img src="images/home/home page solution img-1.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-4">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-6">
+                                        <h3>Pump Monitoring Solutions</h3>
+                                        <p>Monitor industrial pumps in real-time with Hitachi's IoT pump monitoring solution. From manufacturing plants to facility management systems, our solutions ensure equipment health monitoring and predictive maintenance.</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li><strong>Remote Pump Monitoring – </strong>Seamless data collection for real-time visibility.</li>
+                                            <li><strong>Predictive Analytics – </strong>Advanced tools to forecast pump failures before they occur.</li>
+                                        </ul>
+                                        <p><a href="pump-monitoring-system.html" class="tab-item-action">Explore Pump Monitoring <img src="images/global/arrow-black.png" alt="Search" width="8px" height="auto"></a></p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="wrap-image"><img src="images/home/home page solution img-2.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-5">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-6">
+                                        <h3>RFID-Based Solutions</h3>
+                                        <p>Transform warehouse operations with advanced RFID solutions for seamless tracking and asset management.</p>
+                                        <p><strong>Key Solutions:</strong></p>
+                                        <ul>
+                                            <li><strong>RFID Asset Management & Tracking – </strong>Improve visibility and accountability for assets.</li>
+                                            <li><strong>Warehouse Management Solution (WMS) – </strong>Automate inventory tracking and optimize workflows.</li>
+                                            <li><strong>Mobile RFID Solutions – </strong>Enhance mobility and accuracy in inventory management.</li>
+                                            <li><strong>RFID Consulting & Implementation – </strong>Tailored RFID integration for your operations.</li>
+                                        </ul>
+                                        <p><a href="rfid-solutions.html" class="tab-item-action">Explore RFID Solutions <img src="images/global/arrow-black.png" alt="Search" width="8px" height="auto"></a></p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="wrap-image"><img src="images/home/home page solution img-4.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-solution-article" class="section-m">
+            <div class="Container">
+                <h2>End-to-End IoT Solutions Tailored for Your Industry</h2>
+                <p>From strategy to execution, Hitachi provides expert IoT solutions designed for operational excellence.</p>
+                <br>
+                <h4>Services Offered:</h4>
+                <div class="Container-row articles">
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/new-home-img-05.jpg" alt="Search" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">IoT Strategy & Consulting</h6>
+                                <p>Custom architecture planning for cloud, on-premise, or hybrid solutions.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-data-analytics.jpg" alt="Search" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Data Analytics & Insights</h6>
+                                <p>Improve production efficiency through predictive analytics.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-industrial-implementation-img.jpg" alt="Search" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Industrial IoT Implementation</h6>
+                                <p>Seamless integration with existing systems for enhanced automation.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-device-asset-managemenent.jpg" alt="Search" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Device & Asset Management</h6>
+                                <p>Real-time monitoring for improved asset performance.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="section-solution-deliver" class="section-m">
+            <div class="Container">
+                <h2>How We Deliver Cutting-Edge IoT Solutions</h2>
+                <p>Our streamlined process ensures Efficiency and seamless IoT adoption for your business.</p>
+                <br>
+                <div class="Container-row tabs style-2">
+                    <div class="col-12 col-md-12">
+                        <ul class="tab-menu">
+                            <li><a href="#" data="tab-1" class="active">Step 1: Discovery & Assessment</a></li>
+                            <li><a href="#" data="tab-2">Step 2: Solution Design</a></li>
+                            <li><a href="#" data="tab-3">Step 3: Implementation</a></li>
+                            <li><a href="#" data="tab-4">Step 4: Monitoring & Optimization</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <div class="tab-content" style="background: #f4f4f4;">
+                            <div class="tab-item active" data="item-1">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-8">
+                                        <p>Our experts evaluate your industrial operations through detailed analysis:<br>
+                                            <ul>
+                                                <li>Equipment condition assessment and failure risk analysis</li>
+                                                <li>Current system integration capabilities review</li>
+                                                <li>ROI potential calculation and priority identification</li>
+                                                <li>Custom IoT roadmap development for your specific industry needs</li>
+                                            </ul>
+                                            </p>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="wrap-image"><img src="images/home/new-home-img-01.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-2">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-8">
+                                        <p>Our experts evaluate your industrial operations through detailed analysis:</p>
+                                            <ul>
+                                                <li>Custom sensor selection and placement strategy design</li>
+                                                <li>Cloud platform and communication protocol configuration</li>
+                                                <li>Dashboard and alert system customization for your team</li>
+                                                <li>Scalable architecture planning for future expansion needs</li>
+                                            </ul>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="wrap-image"><img src="images/home/new-home-img-09.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-3">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-8">
+                                        <p>Professional deployment ensures minimal operational disruption:</p>
+                                            <ul>
+                                                <li>Strategic installation during planned maintenance periods</li>
+                                                <li>Comprehensive system testing and calibration procedures</li>
+                                                <li>Staff training on new monitoring interfaces and protocols</li>
+                                                <li>24/7 technical support during initial implementation phase</li>
+                                            </ul>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="wrap-image"><img src="images/home/new-home-img-03.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" data="item-4">
+                                <div class="Container-row">
+                                    <div class="col-12 col-md-8">
+                                        <p>Continuous improvement ensures maximum long-term value:</p>
+                                            <ul>
+                                                <li>Real-time system performance monitoring and analysis</li>
+                                                <li>Regular optimization recommendations based on data insights</li>
+                                                <li>Proactive maintenance scheduling and system updates</li>
+                                                <li>Quarterly business reviews to track ROI and identify expansion opportunities</li>
+                                            </ul>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="wrap-image"><img src="images/home/home page solution img-5.jpg" alt="Search" width="100%" height="auto"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="section-solution-why-choose" class="section-m">
+            <div class="Container">
+                <h2>Why Choose Hitachi's Industrial IoT Solutions?</h2>
+                <p>In today's fast-paced industrial landscape, ineffciencies, unexpected failures, and disconnected systems can slow down operations and impact profitability. Are you struggling with these challenges? It's time to take control.</p>
+                <p>Our cutting-edge Industrial IoT solutions provide real-time monitoring, predictive analytics, and seamless integration to help you reduce downtime, boost Efficiency, and make smarter decisions—faster.</p>
+                <div class="Container-row articles slider">
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/image-07.1.png" alt="Article Image" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Real-Time Data Monitoring & Alerts</h6>
+                                <p>Instantly track critical metrics with real-time monitoring and automated alerts, ensuring operational Efficiency and proactive issue resolution.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/new-home-img-04.jpg" alt="Article Image" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Predictive Maintenance & Analytics</h6>
+                                <p>Reduce downtime and repair costs with AI-driven predictive maintenance, detecting potential failures before they disrupt operations.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-cloud-based-data.jpg" alt="Article Image" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Secure Cloud-Based Data Processing</h6>
+                                <p>Benefit from enterprise-grade security and scalable cloud architecture for reliable data storage, analysis, and remote accessibility.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-seamless-intergration.jpg" alt="Article Image" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Seamless Integration with Existing Systems</h6>
+                                <p>Our IoT solutions are designed to integrate effortlessly with your current infrastructure, ensuring smooth implementation and minimal disruptions.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <img src="images/home/home-page-solution-img-8.jpg" alt="Article Image" width="100%" height="auto">
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title">Scalable & Customizable Solutions</h6>
+                                <p>Future-proof your business with IoT solutions that adapt to your evolving operational needs, from small-scale deployments to enterprise-wide implementations</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="custom-nav">
+                    <div class="custom-prev"><img src="images/global/arrow-white-left.png" alt="Arrow Image" width="10px" height="auto"></div>
+                    <span class="custom-counter">1/2</span>
+                    <div class="custom-next"><img src="images/global/arrow-white-right.png" alt="Arrow Image" width="10px" height="auto"></div>
+                </div>
+            </div>
+        </div>
+        <div id="section-news-article" class="section-m">
+            <div class="Container">
+                <h2>News</h2>
+                <div class="Container-row articles">
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <a href="#"><img src="images/home/image-08.1.png" alt="Article Image" width="100%" height="auto"></a>
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</a></h6>
+                                <p class="redirect-link"><a href="#"><img src="images/global/arrow-white-right.png" alt="Arrow Image" width="10px" height="auto"></a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <a href="#"><img src="images/home/image-08.2.png" alt="Article Image" width="100%" height="auto"></a>
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title"><a href="#">Lorem ipsum dolor sit amet, consectetuer</a></h6>
+                                <p class="redirect-link"><a href="#"><img src="images/global/arrow-white-right.png" alt="Arrow Image" width="10px" height="auto"></a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <a href="#"><img src="images/home/image-08.3.png" alt="Article Image" width="100%" height="auto"></a>
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</a></h6>
+                                <p class="redirect-link"><a href="#"><img src="images/global/arrow-white-right.png" alt="Arrow Image" width="10px" height="auto"></a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-md-3">
+                        <div class="article-inner">
+                            <div class="wrap-image">
+                                <a href="#"><img src="images/home/image-08.4.png" alt="Article Image" width="100%" height="auto"></a>
+                            </div>
+                            <div class="wrap-content">
+                                <h6 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h6>
+                                <p class="redirect-link"><a href="#"><img src="images/global/arrow-white-right.png" alt="Arrow Image" width="10px" height="auto"></a></p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div id="section-ready-to-optimize" style="background: url('images/home/home-bg-ready.png') no-repeat center center; background-size: cover;">
+            <div class="Container">
+                <div class="Container-row">
+                    <div class="col-12 col-md-8">
+                        <h2>Ready to Optimize Your Operations?</h2>
+                        <p>Connect with our experts to explore customized IoT solutions for your business.</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="schedule"><a href="#" class="tab-item-action">Schedule a Free Consultation <img src="images/global/arrow-red.png" alt="Arrow Image" width="8px" height="auto"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ContentsArea-->
+    <footer>
+        <div id="footer-top" style="background: #f4f4f4">
+            <div class="Container">
+                <span id="back-to-top"><img src="images/global/back-to-top.jpg" alt="Arrow Image" width="35px" height="auto"></span>
+                <div class="menu-item-top">
+                   <ul class="sub-menu-title">
+                    <li><a href="index.html"><span>Hitachi Industrial Components & Equipment</span></a></li>
+                   </ul>
+                </div>
+                <div class="Container-row">
+                    <div class="col-12 col-md-6">
+                        <ul class="menu-footer">
+                            <li class="sub-menu-link has-submenu">
+                                <a href="#"><span>IoT Solutions</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="remote-crane-monitoring-solution.html"><span>Crane Monitoring Solutions</span></a></li>
+                                    <li><a href="compressor-monitoring-control-solution.html"><span>Compressor Monitoring Solutions</span></a>
+                                    </li>
+                                    <li><a href="pump-monitoring-system.html"><span>Pump Monitoring Solutions</span></a></li>
+                                    <li><a href="rfid-solutions.html"><span>RFID-Based Solutions</span></a></li>
+                                    <li><a href="fertilizer-production-process-monitoring.html"><span>Fertilizer Process Monitoring</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-1"></div>
+                    <div class="col-12 col-md-5">
+                        <ul class="menu-footer">
+                            <li><a href="#"><span>Blog (News)</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom" style="background: #e5e5e5">
+            <div class="Container">
+                <div class="Container-row">
+                    <div class="col-12 col-md-6">
+                        <ul class="socials">
+                            <li><a target="_blank" href="https://twitter.com/Hitachi"><img src="images/global/icon-social-01.png" alt="Twitter Official Account"></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/HitachiAsia/?WT.ac=FM"><img src="images/global/icon-social-02.png" alt="Facebook Official Page"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/user/HitachiBrandChannel/?WT.ac=FM"><img src="images/global/icon-social-03.png" alt="YouTube Official Channel"></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/hitachi" ><img src="images/global/icon-social-04.png" alt="Instagram Official Account"></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company/hitachi"><img src="images/global/icon-social-05.png" alt="LinkedIn Official Page"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="menu-bottom-footer">
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Contact Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Container global-links-title">
+                <div class="Container-row">
+                    <div class="col-12">
+                        <div class="links-title">Hitachi Global Website</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Container copyrighter">
+                <div class="Container-row">
+                    <div class="col-12 col-md-6">
+                        <div class="copyright">© Hitachi, Ltd. 1994, 2024. All rights reserved.</div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="menu-bottom-footer">
+                            <li><a href="#">Accessibility Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Notice</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/FooterArea-->
+</body>
+</html>

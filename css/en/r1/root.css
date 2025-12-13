@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #c00;
+  --brand-color: #fa000f;
+  --color-white: #fff;
+  --color-black: #0c0c0c;
+  --color-supportive-grey-1: #f4f4f4;
+  --color-supportive-grey-2: #d9d9d9;
+  --color-supportive-grey-3: #b3b3b3;
+  --color-supportive-grey-4: #737373;
+  --color-supportive-grey-5: #4d4d4d;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../../../fonts/icomoon.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular variable font */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../../../fonts/NotoSans/NotoSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Italic variable font */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../../../fonts/NotoSans/NotoSans-Italic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+/* HitachiSans Regular */
+@font-face {
+  font-family: "Hitachi Sans";
+  src: url("../../../fonts/HitachiSans/HitachiSans-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* HitachiSans Bold */
+@font-face {
+  font-family: "Hitachi Sans";
+  src: url("../../../fonts/HitachiSans/HitachiSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
