@@ -913,14 +913,15 @@ li > a:hover span {
   width: 15px; /* match your PNG */
   height: 15px;
   margin-left: 0.4rem;
-  background: url("/images/global/arrow-black-right.png") no-repeat center;
+  background: url("../../../images/global/arrow-black-right.png") no-repeat
+    center;
   background-size: contain;
   vertical-align: middle;
 }
 
 /* Hover state */
 .menu-footer li > a:hover::after {
-  background-image: url("/images/global/arrow-red.png");
+  background-image: url("../../../images/global/arrow-red.png");
 }
 
 .menu-footer a img {
