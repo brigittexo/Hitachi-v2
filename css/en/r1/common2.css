@@ -269,6 +269,7 @@ header {
   padding: 1.5rem;
   width: 100%;
 }
+
 #section-banner .banner-text a {
   display: inline-block;
   color: #fff;
@@ -1281,4 +1282,141 @@ li > a:hover span {
   border: 2px solid transparent;
   color: #fff;
   gap: 0.5rem;
+}
+
+/** brigitte **/
+/* Hero wrapper */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 60vh, 680px);
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+/* Background image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Text container (absolute overlay) */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Full-width background image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Centered 1300px container */
+.hero-inner {
+  position: absolute;
+  inset: 0;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px; /* gutters */
+}
+
+/* Actual content card */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  backdrop-filter: blur(20px) brightness(0.5);
+  background: transparent
+    linear-gradient(27deg, var(--primary-color) -110%, #fff 25%) 0 0 no-repeat
+    padding-box;
+  border: 0.0625rem solid var(--color-supportive-grey-4);
+  border-radius: 0.5rem;
+  opacity: 0.9;
+}
+
+/* CTA */
+
+.hero-content a {
+  display: inline-block;
+  color: #fff;
+  background-color: #cc0000;
+  padding: 0 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 300;
+  height: 44px;
+  line-height: 44px;
+}
+
+.hero-content a:hover {
+  background-color: var(--color-black);
+}
+
+.hero-content a img {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+/* ============================= */
+/* Mobile: stack image + content */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .hero-image {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  /* FULL WIDTH, NO CENTRE OFFSET */
+  .hero-inner {
+    position: relative;
+    left: 0;
+    right: 0;
+    inset: auto; /* kills desktop inset:0 */
+    width: 100%;
+    max-width: none; /* IMPORTANT */
+    margin: 0; /* IMPORTANT */
+    padding: 0 16px 18px; /* your gutters */
+    transform: none; /* just in case */
+  }
+
+  .hero-content {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+
+    width: 100%;
+    max-width: none;
+    margin: 12px 0 0;
+    padding: 18px 18px 20px;
+
+    background: #fff;
+    border-radius: 16px;
+    backdrop-filter: none;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
 }
