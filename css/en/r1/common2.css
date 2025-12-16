@@ -1545,3 +1545,7 @@ li > a:hover span {
 	width: 30%; /* control the red length */
 	background: #c40000; /* red */
 }
+
+.mega-menu-panel p.p-18 {
+    text-decoration: underline;
+}
