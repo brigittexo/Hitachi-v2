@@ -41,13 +41,17 @@ Name: common2.css
 .header-top .header-action li a.active,
 .header-top .header-action li a:hover {
 	background: #f4f4f4;
-	text-decoration: none;
 }
 .header-top .header-action li a span {
 	padding-left: 8px;
 	font-size: 14px;
 	color: #222;
 }
+
+.header-top .header-action li a:hover span {
+text-decoration: none;
+}
+
 .search-wrap {
 	background: #f4f4f4;
 }
