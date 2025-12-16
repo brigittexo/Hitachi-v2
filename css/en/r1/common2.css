@@ -729,11 +729,11 @@ header {
 }
 #section-ready-to-optimize h2 {
 	color: #fff;
-	padding-left: 40px;
+	
 }
 #section-ready-to-optimize p {
 	color: #fff;
-	padding-left: 40px;
+	
 }
 #section-ready-to-optimize .schedule {
 	height: 100%;
@@ -1435,6 +1435,9 @@ li > a:hover span {
 /* ============================= */
 
 @media (max-width: 768px) {
+	#section-ready-to-optimize {
+	text-align: center;
+}
 	.hero-section {
 		height: auto;
 		min-height: 0;
