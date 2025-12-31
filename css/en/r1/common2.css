@@ -197,7 +197,7 @@ header {
 	width: 24px;
     height: 20px;
 	transition: all 250ms;
-    background: url("../../../images/global/menu-black-arrow.jpg") no-repeat center;
+    background: url("../../../images/global/icomoon-arrow-right.svg") no-repeat center;
     background-size: contain;
     display: inline-block;
     margin-bottom: -5px;
