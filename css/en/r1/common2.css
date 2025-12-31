@@ -8,6 +8,12 @@ Name: common2.css
 ***************************************************** */
 /*Header
 ===================================================*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../../../fonts/Icomoon/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .header-top .logo {
 	height: 45px;
@@ -189,18 +195,17 @@ header {
 }
 .mega-menu-panel .tab-content a {
 	font-weight: bold;
-	display: inline-block;
+	display: flex;
+    align-items: center;
 }
 .mega-menu-panel .tab-content a:after {
-	content: "";
+	content: "\e912";
+    font-family: 'icomoon';
+    font-size: 24px;
 	margin-left: 10px;
-	width: 24px;
-    height: 20px;
 	transition: all 250ms;
-    background: url("../../../images/global/icomoon-arrow-right.svg") no-repeat center;
-    background-size: contain;
     display: inline-block;
-    margin-bottom: -5px;
+    font-weight: normal;
 }
 .mega-menu-panel .tab-content a:hover:after {
 	margin-left: 15px;
@@ -493,7 +498,7 @@ header {
 	opacity: 0;
 }
 .tabs.style-4 .tab-menu li a {
-	padding: 8px 20px;
+	padding: 8px 50px 8px 20px;
 }
 .tabs.style-4 .tab-menu li a.active {
 	background: none;
