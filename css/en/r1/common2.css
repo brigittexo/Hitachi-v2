@@ -192,10 +192,15 @@ header {
 	display: inline-block;
 }
 .mega-menu-panel .tab-content a:after {
-	content: "→";
+	content: "";
 	margin-left: 10px;
-	font-size: 20px;
+	width: 24px;
+    height: 20px;
 	transition: all 250ms;
+    background: url("../../../images/global/menu-black-arrow.jpg") no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    margin-bottom: -5px;
 }
 .mega-menu-panel .tab-content a:hover:after {
 	margin-left: 15px;
