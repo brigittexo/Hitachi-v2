@@ -174,6 +174,7 @@ text-decoration: none;
 }
 header {
 	position: relative;
+
 }
 .mega-menu-panel {
 	position: fixed;
@@ -210,7 +211,16 @@ header {
 .mega-menu-panel .tab-content a:hover:after {
 	margin-left: 15px;
 }
-
+.mash-layout{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.6;
+    background: #000;
+}
 /** call to action **/
 
 .header-menu .menu-item > a {
