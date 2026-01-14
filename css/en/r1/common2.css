@@ -1551,7 +1551,7 @@ li > a:hover span {
 
 /** general **/
 .text-decoration-underline {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .custom-hr {
