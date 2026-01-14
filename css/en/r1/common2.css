@@ -151,7 +151,7 @@ text-decoration: none;
 }
 
 .header-menu > li.mega-menu > a {
-	padding-right: 50px;
+	padding-right: 40px;
 	position: relative;
 }
 .header-menu > li.mega-menu > a img {
@@ -231,6 +231,7 @@ header {
 .header-menu .menu-item > a::after {
 	content: "\f078"; /* fa-chevron-down */
 	font-family: "Font Awesome 7 Free";
+	font-size: 10px;
 	font-weight: 900;
 	position: absolute;
 	right: 20px;
@@ -704,7 +705,7 @@ header {
 .custom-nav div {
 	width: 30px;
 	height: 30px;
-	background: #000;
+	background-color: #f4f4f4;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -713,7 +714,7 @@ header {
 	cursor: pointer;
 }
 .custom-nav div:hover {
-	background: #cc0000;
+	background-color: #f4f4f4;
 }
 #section-news-article .wrap-content p {
 	display: flex;
@@ -1554,8 +1555,8 @@ li > a:hover span {
 	text-decoration: none;
 }
 
-.services-section {
-	margin-top: 50px;
+.margintop-40 {
+	margin-top: 40px;
 }
 .custom-hr {
 	position: relative;
