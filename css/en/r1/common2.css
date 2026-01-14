@@ -1554,6 +1554,9 @@ li > a:hover span {
 	text-decoration: none;
 }
 
+.services-section {
+	margin-top: 50px;
+}
 .custom-hr {
 	position: relative;
 	width: 100%;
