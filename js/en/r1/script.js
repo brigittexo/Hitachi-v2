@@ -138,41 +138,48 @@ Copyright 2025 Hitachi, Ltd.
                 scrollTop: 0
             }, 700);
         });
+        $('.mega-menu-panel').append('<div class="mash-layout"></div>');
+        $('.mobile-menu').append('<div class="mash-layout"></div>');
         $(document).on('click', '.search-toggle a, .close-search', function (e) {
             e.preventDefault();
             $('.search-toggle a').toggleClass('active');
             $('.search-wrap').slideToggle();
+
+            $('.mobile-menu-toggle').removeClass('active');
+            $('.mobile-menu').removeClass('active');
+
         });
         $(document).on('click', '.mega-menu a', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mega-menu-panel').toggleClass('active');
-            if($('.mash-layout')[0]){
-                $('.mash-layout').remove();
-            }
-            else{
-                $('.mega-menu-panel').append('<div class="mash-layout"></div>');
-            }
-            
         });
+
         $(document).on('click', '.mash-layout', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mega-menu-panel').toggleClass('active');
             $('.mash-layout').remove();
+
+            $('.mobile-menu-toggle').removeClass('active');
+            $('.mobile-menu').removeClass('active');
         });
-        $(document).on('click', '.tab-content a', function (e) {
-            $('.mega-menu a').toggleClass('active');
-            $('.mega-menu-panel').toggleClass('active');
-        });
+        
         $(document).on('click', '.mobile-menu-toggle', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mobile-menu').toggleClass('active');
+
+            $('.search-toggle a').removeClass('active');
+            $('.search-wrap').slideUp();
         });
         $(document).on('click', '.mobile-menu li.has-chilrent > a, .mobile-menu li.has-chilrent > .sub-arrow', function (e) {
             e.preventDefault();
             $(this).parent().toggleClass('active');
+        });
+        $(document).on('click', '.tab-content a', function (e) {
+            $('.mega-menu a').toggleClass('active');
+            $('.mega-menu-panel').toggleClass('active');
         });
         //Sticky header
         var header = $("header");
