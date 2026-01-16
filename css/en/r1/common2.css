@@ -83,7 +83,7 @@ text-decoration: none;
 .search-wrap form input {
 	width: 100%;
 	height: 38px;
-	background: #fff;
+	background: #d9d9d9;
 	border: none !important;
 	outline: none !important;
 	padding: 0 10px;
@@ -444,15 +444,19 @@ header {
 .articles article .article-inner h3.title {
 	font-weight: normal;
 }
-.articles article .title a:hover {
-	color: #cc0000;
-}
+
 .articles article .article-inner .wrap-content {
 	padding: 15px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	position: relative;
+}
+.articles article:hover .title a{
+    color: #cc0000;
+}
+.articles article:hover .redirect-link a{
+    background: #cc0000 !important;
 }
 /* Article with icon box */
 .articles.icon-box .wrap-image {
@@ -713,11 +717,23 @@ header {
 	align-items: center;
 	justify-content: center;
 	border-radius: 3px;
-	margin: 0 20px;
+	
 	cursor: pointer;
 }
+.custom-nav .slick-disabled{
+    cursor: not-allowed;
+}
+.custom-nav .slick-disabled img{
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
 .custom-nav div:hover {
 	background-color: #f4f4f4;
+}
+.custom-counter{
+    width: 80px;
+    text-align: center;
 }
 #section-news-article .wrap-content p {
 	display: flex;
@@ -1052,6 +1068,10 @@ li > a:hover span {
 	align-items: center;
 	color: var(--primary-color);
 	padding: 10px 0;
+    font-size: 14px;
+}
+.breadcrumb span {
+    font-size: 14px;
 }
 .breadcrumb a:hover {
 	color: var(--primary-color);
