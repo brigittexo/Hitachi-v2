@@ -499,6 +499,14 @@ header {
 .tabs.style-3 .tab-content .wrap-content {
 	padding: 20px 30px;
 }
+.tabs.style-3 .wrap-image{
+    height: 562px;
+}
+.tabs.style-3 .wrap-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 /*Tab style 4*/
 .tabs.style-4 {
 	margin: 0;
