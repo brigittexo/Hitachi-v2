@@ -537,7 +537,7 @@ header {
 	opacity: 1;
 }
 .tabs.style-4 .tab-content {
-	padding: 30px 60px;
+	padding: 50px 60px;
 }
 .tabs.style-4 .tab-content a {
 	color: #222;
@@ -1782,4 +1782,8 @@ blockquote {
         letter-spacing: 0;
         line-height: 2.5rem
     }
+}
+
+.tab-item-list p {
+    margin-bottom: 20px;
 }
