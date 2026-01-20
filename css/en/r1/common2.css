@@ -1054,7 +1054,7 @@ li > a:hover span {
 	text-decoration: underline;
 }
 .copyrighter {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 @media (max-width: 767px) {
 	.menu-footer .sub-menu li {
@@ -1206,6 +1206,16 @@ li > a:hover span {
 	height: 52px;
 	margin-top: 20px;
 }
+
+.links-title a {
+    color: #000000;
+}
+
+.links-title a:hover {
+    color: var(--primary-color);
+	text-decoration: underline;
+}
+
 @media (max-width: 1024px) {
 	.mega-menu-panel,
 	.header-top .header-action .languages,
@@ -1364,10 +1374,26 @@ li > a:hover span {
 	}
 }
 @media (min-width: 1025px) {
-	.global-links-title,
+	
 	.mobile-menu.active {
 		display: none;
 	}
+
+	.global-links-title {
+		display: inherit;
+	}
+
+	.links-title {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid #4d4d4d;
+    height: 0px;
+    margin-top: 30px;
+}
+
 	.sticky-effects .header-bottom {
 		position: fixed;
 		top: 0;
