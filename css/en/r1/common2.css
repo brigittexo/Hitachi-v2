@@ -1207,13 +1207,8 @@ li > a:hover span {
 	margin-top: 20px;
 }
 
-.links-title a {
-    color: #000000;
-}
-
-.links-title a:hover {
-    color: var(--primary-color);
-	text-decoration: underline;
+.links-title a:visited{
+color: #000;
 }
 
 @media (max-width: 1024px) {
@@ -1383,16 +1378,21 @@ li > a:hover span {
 		display: inherit;
 	}
 
-	.links-title {
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    border: 0px solid #4d4d4d;
-    height: 0px;
-    margin-top: 30px;
-}
+  .links-title {
+        display: inline-block;
+        border: 0;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    /* Desktop hover ONLY */
+	.links-title a:link,.links-title a:visited  {
+color: var(--color-black);
+	}
+    .links-title a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
 
 	.sticky-effects .header-bottom {
 		position: fixed;
