@@ -1208,7 +1208,7 @@ li > a:hover span {
 }
 
 .links-title a:visited{
-color: #000 !important;
+color: #000;
 }
 
 @media (max-width: 1024px) {
