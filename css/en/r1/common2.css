@@ -997,7 +997,7 @@ li > a:hover span {
 	width: 50%;
 }
 .footer-bottom {
-	padding: 40px 0 30px 0;
+	padding: 20px 0 10px 0;
 }
 .socials {
 	padding: 0;
@@ -1054,7 +1054,7 @@ li > a:hover span {
 	text-decoration: underline;
 }
 .copyrighter {
-	margin-top: 10px;
+	margin-top: 9px;
 }
 @media (max-width: 767px) {
 	.menu-footer .sub-menu li {
@@ -1197,7 +1197,7 @@ li > a:hover span {
 	z-index: 1;
 }
 .links-title {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
@@ -1205,6 +1205,10 @@ li > a:hover span {
 	border: 1px solid #4d4d4d;
 	height: 52px;
 	margin-top: 20px;
+}
+
+.links-title a:link{
+color: #000;
 }
 
 .links-title a:visited{
