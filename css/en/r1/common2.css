@@ -365,6 +365,10 @@ header {
 
 /* Mobile */
 @media (max-width: 767px) {
+	.tabs.style-3 .wrap-image {
+		height: auto !important;
+	}
+
 	#section-banner .hero-container {
 		min-height: auto;
 		padding: 50px 16px 40px;
@@ -1411,6 +1415,7 @@ color: #000;
 	#footer-top {
 		margin-top: 60px;
 		padding-bottom: 60px;
+		padding-top: 50px;
 	}
 }
 @media (min-width: 1025px) {
