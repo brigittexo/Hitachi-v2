@@ -235,18 +235,41 @@ header {
 }
 
 .header-menu .menu-item > a::after {
-	content: "\f078"; /* fa-chevron-down */
+	content: "\f078"; /* Font Awesome chevron-down */
 	font-family: "Font Awesome 7 Free";
 	font-size: 10px;
 	font-weight: 900;
 	position: absolute;
 	right: 20px;
 	top: 50%;
-	transform: translateY(-50%);
-	transition:
-		transform 0.2s ease,
-		color 0.2s ease;
+	transform: translateY(-50%) rotate(0deg);
+	transition: transform 0.2s ease, color 0.2s ease;
 	color: var(--color-black);
+}
+
+/* Active styles */
+.header-menu .menu-item.is-active > .menu-link {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.header-menu .menu-item.is-active > .menu-link span {
+  color: #ffffff;
+}
+
+/* Chevron UP when active */
+.header-menu .menu-item.is-active > .menu-link::after {
+  transform: translateY(-50%) rotate(180deg);
+  color: #ffffff;
+}
+
+/* Dropdown logic */
+.mega-menu-content {
+  display: none;
+}
+
+.menu-item.is-active .mega-menu-content {
+  display: block;
 }
 
 .header-menu .menu-item > a:hover span {
