@@ -140,15 +140,29 @@ Copyright 2025 Hitachi, Ltd.
         });
         $('.mega-menu-panel').append('<div class="mash-layout"></div>');
         $('.mobile-menu').append('<div class="mash-layout"></div>');
-        $(document).on('click', '.search-toggle a, .close-search', function (e) {
-            e.preventDefault();
-            $('.search-toggle a').toggleClass('active');
-            $('.search-wrap').slideToggle();
+        
+        if ($(window).width() >= 1025) {
+            $(document).on('click', '.search-toggle a, .close-search', function (e) {
+                e.preventDefault();
+                $('.search-toggle a').toggleClass('active');
+                $('.search-wrap').slideToggle();
 
-            $('.mobile-menu-toggle').removeClass('active');
-            $('.mobile-menu').removeClass('active');
+                $('.mobile-menu-toggle').removeClass('active');
+                $('.mobile-menu').removeClass('active');
 
-        });
+            });
+        }
+        else{
+            $(document).on('click', '.search-toggle a, .close-search, .mash-layout', function (e) {
+                e.preventDefault();
+                $('.search-toggle a').toggleClass('active');
+                $('.search-wrap').toggleClass('active');
+
+                $('.mobile-menu-toggle').removeClass('active');
+                $('.mobile-menu').removeClass('active');
+
+            });
+        }
         $(document).on('click', '.mega-menu a', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
@@ -194,6 +208,10 @@ Copyright 2025 Hitachi, Ltd.
                 header.removeClass("sticky-effects");
             }
         }); 
+        $(document).on('click', '.header-action .languages', function (e) {
+            $(this).toggleClass('active');
+            $(this).find('.sub-menu').slideToggle();
+        });
     });
     
 })(jQuery);
