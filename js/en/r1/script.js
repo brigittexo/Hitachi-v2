@@ -173,8 +173,7 @@ Copyright 2025 Hitachi, Ltd.
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mega-menu-panel').toggleClass('active');
-            $('.mash-layout').remove();
-
+            
             $('.mobile-menu-toggle').removeClass('active');
             $('.mobile-menu').removeClass('active');
         });
