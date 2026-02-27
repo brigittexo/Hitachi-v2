@@ -1240,6 +1240,9 @@ li > a:hover span {
 	padding: 8px 10px;
 	position: relative;
 }
+.mobile-menu ul.menu .sub-menu li{
+    padding-left: 25px;
+}
 .mobile-menu ul.menu li a {
 	color: #222;
 }
@@ -1506,8 +1509,10 @@ color: #000;
 	#footer-top {
 		margin-top: 60px;
 		padding-bottom: 60px;
-		padding-top: 50px;
 	}
+    #footer-top .Container{
+        padding-top: 30px;
+    }
     .tabs.style-1 .tab-menu li a, .tabs.style-2 .tab-menu li a, .tabs.style-3 .tab-menu li a {
         height: 40px;
     }

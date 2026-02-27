@@ -10,91 +10,104 @@ Copyright 2025 Hitachi, Ltd.
 (function ($) {
     'use strict';
 
-    jQuery(document).ready(function ($) { 
-        //Scroll to top
-        $(window).on('scroll', function() {
+    var isMobile = function () {
+        return $(window).width() < 1025;
+    };
+
+    jQuery(document).ready(function ($) {
+
+        // -----------------------------------------------
+        // Scroll to top button
+        // -----------------------------------------------
+        $(window).on('scroll', function () {
             if ($(window).scrollTop() > 20) {
                 $('#myBtn').show();
             } else {
                 $('#myBtn').hide();
             }
         });
-        window.topFunction = function() {
+
+        window.topFunction = function () {
             $('html, body').animate({ scrollTop: 0 }, 'fast');
         };
-        // Tabs
-        $('.tab-menu a').on('click', function(e) {
+
+        $(document).on('click', '#back-to-top', function (e) {
             e.preventDefault();
-            $(this).parents('.tabs').find('.tab-menu a').removeClass('active');
-            $(this).parents('.tabs').find('.tab-item').removeClass('active');
+            $('html, body').animate({ scrollTop: 0 }, 700);
+        });
+
+        // -----------------------------------------------
+        // Tabs
+        // -----------------------------------------------
+        $('.tab-menu a').on('click', function (e) {
+            e.preventDefault();
+            var $tabs = $(this).parents('.tabs');
+            $tabs.find('.tab-menu a').removeClass('active');
+            $tabs.find('.tab-item').removeClass('active');
             $(this).addClass('active');
             var tabId = $(this).attr('data').replace('tab-', 'item-');
-            $(this).parents('.tabs').find('.tab-item[data="' + tabId + '"]').addClass('active');
-            $(this).parents('.tabs').find('.text').text($(this).text());
-            $(this).parents('.tabs').find('.mb-toggle-tab-wraper').removeClass('active');
+            $tabs.find('.tab-item[data="' + tabId + '"]').addClass('active');
+            $tabs.find('.text').text($(this).text());
+            $tabs.find('.mb-toggle-tab-wraper').removeClass('active');
         });
+
         if ($('.tabs')[0]) {
             $('.tabs').each(function () {
-                let tab_heading = $(this).find('a.active').text();
-                let toggle = `
-                    <div class="mb-toggle-tab">
-                        <span class="text">${tab_heading}</span>
-                        <span class="icon"><img src="images/global/arrow-red-down.png"></span>
-                    </div>`;
+                var tab_heading = $(this).find('a.active').text();
+                var toggle = '<div class="mb-toggle-tab">' +
+                    '<span class="text">' + tab_heading + '</span>' +
+                    '<span class="icon"><img src="images/global/arrow-red-down.png"></span>' +
+                    '</div>';
                 $(this).find('.tab-menu').wrap('<div class="mb-toggle-tab-wraper"></div>');
                 $(this).find('.mb-toggle-tab-wraper').prepend(toggle);
             });
         }
-        $('.mb-toggle-tab').on('click', function(e) {
+
+        $(document).on('click', '.mb-toggle-tab', function (e) {
             e.preventDefault();
             $(this).parent().toggleClass('active');
         });
+
+        // -----------------------------------------------
+        // Equalize title heights
+        // -----------------------------------------------
         function equalizeTitleHeights() {
             $('.articles').each(function () {
                 var maxHeight = 0;
                 var $titles = $(this).find('.wrap-content h3');
-
-                // Reset height để tính lại đúng
                 $titles.css('height', 'auto');
-
-                // Tìm chiều cao lớn nhất
                 $titles.each(function () {
                     var h = $(this).outerHeight();
                     if (h > maxHeight) maxHeight = h;
                 });
-
-                // Gán chiều cao tối đa cho tất cả
                 $titles.height(maxHeight);
             });
         }
-        // Initialize all sliders
-        $('.slider').each(function (index, element) {
-            var $slider = $(element);
-            var $container = $(this); // assuming .articles is the container for each slider
-            var $counter = $container.parent().find('.custom-counter');
-            var $prev = $container.parent().find('.custom-prev');
-            var $next = $container.parent().find('.custom-next');
 
-            // Update counter
+        // -----------------------------------------------
+        // Slick Sliders
+        // -----------------------------------------------
+        $('.slider').each(function () {
+            var $slider = $(this);
+            var $counter = $slider.parent().find('.custom-counter');
+            var $prev = $slider.parent().find('.custom-prev');
+            var $next = $slider.parent().find('.custom-next');
+
             function updateCounter(event, slick, currentSlide) {
-                var currentIndex = (currentSlide ? currentSlide : 0) + 1;
-                var totalPages = slick.slideCount;
-                var slidesToShow = slick.options.slidesToShow;
-                var totalDisplay = (totalPages + 1) - slidesToShow;
+                var currentIndex = (currentSlide || 0) + 1;
+                var totalDisplay = (slick.slideCount + 1) - slick.options.slidesToShow;
                 $counter.text(currentIndex + '/' + totalDisplay);
             }
 
-            // Equalize heights of slides in this slider
             function equalizeSlideHeights() {
-                let maxHeight = 0;
+                var maxHeight = 0;
                 $slider.find('.slick-slide .article-inner').css('height', 'auto').each(function () {
-                    let h = $(this).outerHeight();
+                    var h = $(this).outerHeight();
                     if (h > maxHeight) maxHeight = h;
                 });
                 $slider.find('.slick-slide .article-inner').height(maxHeight);
             }
-            
-            // Initialize Slick slider
+
             $slider.on('init reInit afterChange', updateCounter);
             $slider.on('setPosition', function () {
                 equalizeSlideHeights();
@@ -130,87 +143,133 @@ Copyright 2025 Hitachi, Ltd.
                 ]
             });
         });
+
         equalizeTitleHeights();
-        //Back to top
-        $(document).on('click', '#back-to-top', function (e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, 700);
-        });
+
+        // -----------------------------------------------
+        // Mega menu & Mobile menu - append overlay
+        // -----------------------------------------------
         $('.mega-menu-panel').append('<div class="mash-layout"></div>');
         $('.mobile-menu').append('<div class="mash-layout"></div>');
-        
-        if ($(window).width() >= 1025) {
-            $(document).on('click', '.search-toggle a, .close-search', function (e) {
-                e.preventDefault();
-                $('.search-toggle a').toggleClass('active');
-                $('.search-wrap').slideToggle();
 
-                $('.mobile-menu-toggle').removeClass('active');
-                $('.mobile-menu').removeClass('active');
-
-            });
+        // -----------------------------------------------
+        // Helper: close search
+        // -----------------------------------------------
+        function closeSearch() {
+            $('.search-toggle a').removeClass('active');
+            if (isMobile()) {
+                $('.search-wrap').removeClass('active');
+            } else {
+                $('.search-wrap').slideUp();
+            }
         }
-        else{
-            $(document).on('click', '.search-toggle a, .close-search, .mash-layout', function (e) {
-                e.preventDefault();
-                $('.search-toggle a').toggleClass('active');
+
+        // Helper: close mobile menu
+        function closeMobileMenu() {
+            $('.mobile-menu-toggle').removeClass('active');
+            $('.mobile-menu').removeClass('active');
+            // Reset toàn bộ submenu khi đóng menu
+            $('.mobile-menu li.has-chilrent').removeClass('active');
+        }
+
+        // -----------------------------------------------
+        // Search toggle
+        // -----------------------------------------------
+        $(document).on('click', '.search-toggle, .close-search', function (e) {
+            e.preventDefault();
+            $('.search-toggle a').toggleClass('active');
+
+            if (isMobile()) {
                 $('.search-wrap').toggleClass('active');
+            } else {
+                $('.search-wrap').slideToggle();
+            }
 
-                $('.mobile-menu-toggle').removeClass('active');
-                $('.mobile-menu').removeClass('active');
+            closeMobileMenu();
+        });
 
-            });
-        }
+        // -----------------------------------------------
+        // Mega menu
+        // -----------------------------------------------
         $(document).on('click', '.mega-menu a', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mega-menu-panel').toggleClass('active');
         });
 
+        $(document).on('click', '.tab-content a', function () {
+            $('.mega-menu a').toggleClass('active');
+            $('.mega-menu-panel').toggleClass('active');
+        });
+
+        // -----------------------------------------------
+        // Overlay (mash-layout) click
+        // -----------------------------------------------
         $(document).on('click', '.mash-layout', function (e) {
             e.preventDefault();
-            $(this).toggleClass('active');
-            $('.mega-menu-panel').toggleClass('active');
-            
-            $('.mobile-menu-toggle').removeClass('active');
-            $('.mobile-menu').removeClass('active');
+
+            // Close mega menu
+            $('.mega-menu-panel').removeClass('active');
+            $('.mega-menu a').removeClass('active');
+
+            // Close mobile menu
+            closeMobileMenu();
+
+            // Close search
+            closeSearch();
         });
-        
+
+        // -----------------------------------------------
+        // Mobile menu toggle
+        // -----------------------------------------------
         $(document).on('click', '.mobile-menu-toggle', function (e) {
             e.preventDefault();
             $(this).toggleClass('active');
             $('.mobile-menu').toggleClass('active');
 
-            $('.search-toggle a').removeClass('active');
-            $('.search-wrap').slideUp();
+            // Đóng search theo đúng mode (không dùng slideUp trên mobile)
+            closeSearch();
         });
+
+        // Mobile submenu - tự đóng các item khác cùng cấp khi mở item mới
         $(document).on('click', '.mobile-menu li.has-chilrent > a, .mobile-menu li.has-chilrent > .sub-arrow', function (e) {
             e.preventDefault();
-            $(this).parent().toggleClass('active');
+            var $thisItem = $(this).parent();
+            var isActive = $thisItem.hasClass('active');
+
+            // Đóng tất cả sibling cùng cấp đang active
+            $thisItem.siblings('li.has-chilrent').removeClass('active');
+
+            // Toggle item hiện tại
+            $thisItem.toggleClass('active', !isActive);
         });
-        $(document).on('click', '.tab-content a', function (e) {
-            $('.mega-menu a').toggleClass('active');
-            $('.mega-menu-panel').toggleClass('active');
-        });
-        //Sticky header
-        var header = $("header");
+
+        // -----------------------------------------------
+        // Sticky header
+        // -----------------------------------------------
+        var $header = $('header');
         var sticky = 0;
-        if ($(window).width() >= 1025) {
-            sticky = $("header .header-top").offset().top + $("header .header-top").height();
+
+        if (!isMobile()) {
+            sticky = $('header .header-top').offset().top + $('header .header-top').height();
         }
-        $(window).scroll(function() {
+
+        $(window).on('scroll', function () {
             if (window.pageYOffset > sticky) {
-                header.addClass("sticky-effects");
+                $header.addClass('sticky-effects');
             } else {
-                header.removeClass("sticky-effects");
+                $header.removeClass('sticky-effects');
             }
-        }); 
-        $(document).on('click', '.header-action .languages', function (e) {
+        });
+
+        // -----------------------------------------------
+        // Language dropdown
+        // -----------------------------------------------
+        $(document).on('click', '.header-action .languages', function () {
             $(this).toggleClass('active');
             $(this).find('.sub-menu').slideToggle();
         });
+
     });
-    
+
 })(jQuery);
