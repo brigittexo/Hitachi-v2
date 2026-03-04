@@ -39,10 +39,11 @@ Name: common2.css
 	height: 100%;
 }
 .header-top .header-action li a {
-	padding: 0 20px;
+	width: 45px;
 	height: 100%;
 	display: flex;
 	align-items: center;
+    justify-content: center;
 }
 .header-top .header-action li a.active,
 .header-top .header-action li a:hover {
@@ -317,18 +318,20 @@ header {
 	color: #ffffff;
 }
 
-.header-menu .menu-item > a:hover,
+.header-menu .menu-item > a:not(.active):hover,
 .header-menu .menu-item.mega-menu:hover > a {
 	background: var(--primary-color); /* red */
 	color: #333333 !important;
 	text-decoration: none;
 }
-
+.header-menu .menu-item > a.active::after,
 .header-menu .menu-item > a:hover::after {
 	transform: translateY(-50%) rotate(180deg);
 	color: #fff;
 }
-
+.header-menu .menu-item > a.active span{
+    color: #fff !important;
+}
 /* Home Banner
 ============================================================================================ */
 .hero-container {
@@ -922,9 +925,22 @@ header {
 #back-to-top {
 	position: absolute;
 	right: 0;
-	top: -35px;
+	top: -40px;
 	z-index: 1;
 	cursor: pointer;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cc0001;
+    overflow: hidden;
+}
+#back-to-top img{
+    transition: all 350ms;
+}
+#back-to-top:hover img{
+    transform: translateY(-3px);
 }
 .menu-item-top {
 	-webkit-box-pack: 0;
@@ -986,19 +1002,6 @@ header {
 	color: #0c0c0c;
 	display: inline-flex;
 	align-items: center;
-	font-weight: 400;
-	line-height: 1.3125rem;
-	padding-right: 1.5rem;
-	position: relative;
-	gap: 0.35rem; /* spacing between text and icon (if any) */
-}
-
-/* Base link styles for submenu */
-.sub-menu li > a {
-	color: #0c0c0c;
-	display: inline-flex;
-	align-items: center;
-	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.3125rem;
 	padding-right: 1.5rem;
@@ -1214,8 +1217,6 @@ li > a:hover span {
 =======================================*/
 .mobile-menu {
 	display: none;
-	border-top: 1px solid #dbdbdb;
-	
 }
 .mobile-menu.active {
 	display: block;
@@ -1232,16 +1233,10 @@ li > a:hover span {
 	flex-direction: column;
     max-height: calc(100vh - 45px);
     overflow-y: auto;
+    background: #fff;
 }
 .mobile-menu ul.menu li {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 8px 10px;
 	position: relative;
-}
-.mobile-menu ul.menu .sub-menu li{
-    padding-left: 25px;
 }
 .mobile-menu ul.menu li a {
 	color: #222;
@@ -1260,12 +1255,13 @@ li > a:hover span {
 	background-size: cover;
 	background-position: center;
 	display: block;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    z-index:  1;
 }
 .mobile-menu ul.menu li.active .sub-arrow {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E%0A");
-}
-.mobile-menu ul.menu li.has-chilrent.active {
-	background: #cc0000;
 }
 .mobile-menu ul.menu li.has-chilrent.active > a img {
     filter: invert(100%);
@@ -1273,8 +1269,12 @@ li > a:hover span {
 .mobile-menu ul.menu > li > a img {
     padding-right: 8px;
 }
-.mobile-menu ul.menu li.has-chilrent.languages{
-    border: none
+.mobile-menu ul.menu li.has-chilrent.languages a{
+    border: none;
+    background: #fff;
+}
+.mobile-menu ul.menu li.has-chilrent.languages.active > a{
+    background: #c00;
 }
 .mobile-menu ul.menu li.contact{
     border-top: 1px solid #d1d1d1;
@@ -1283,37 +1283,28 @@ li > a:hover span {
     padding: 10px 30px;
 }
 .mobile-menu ul.menu li.has-chilrent.languages .sub-menu a img{
-    padding: 2px 5px 0 0;
+    padding: 5px 5px 0 0;
 }
 .mobile-menu ul.menu li.has-chilrent.languages .sub-menu a:after{
     content: none;
-}
-
-.mobile-menu ul.menu li.active > a {
-	color: #fff;
 }
 .mobile-menu ul.menu li .sub-menu {
 	width: 100%;
 	background: #fff;
 	padding: 0;
 }
-.mobile-menu ul.menu li {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding: 12px 10px;
-	position: relative;
+.mobile-menu ul.menu li a{
+    padding: 15px 35px 15px 10px;
 	background: #fff;
-	border-bottom: 1px solid #d1d1d1;
+	border-bottom: 2px solid #b3b3b3;
+    display: block;
 }
-.mobile-menu ul.menu li.has-chilrent {
-	background: #f4f4f4;
+.mobile-menu ul.menu li.has-chilrent a{
+	background: #d9d9d9;
 }
 .mobile-menu ul.menu li.has-chilrent ul {
 	display: none;
-	margin: 10px -10px -15px -10px;
-	width: calc(100% + 20px);
+    overflow: hidden;
 }
 .mobile-menu ul.menu li.has-chilrent ul li:last-child {
 	border: none;
@@ -1321,18 +1312,30 @@ li > a:hover span {
 .mobile-menu ul.menu li.has-chilrent.active ul {
 	display: block;
 }
+.mobile-menu ul.menu li.has-chilrent ul li{
+    padding: 0 25px;
+}
 .mobile-menu ul.menu li.has-chilrent ul li a {
 	position: relative;
-	padding-right: 50px;
-	display: block;
-	width: 100%;
+    background: #fff;
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 20px;
+    border-bottom: 2px solid #d9d9d9;
+}
+.mobile-menu ul.menu li.has-chilrent ul li:last-child a {
+    border: none;
+}
+.mobile-menu ul.menu li.active > a {
+    color: #fff;
+    background: #c00;
 }
 .mobile-menu ul.menu li.has-chilrent ul li a:after {
 	content: "→";
 	font-size: 18px;
 	position: absolute;
-	top: 0;
-	right: 5px;
+	top: 15px;
+	right: 0;
 	z-index: 1;
 }
 .links-title {
@@ -1371,12 +1374,18 @@ color: #000;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: #cc0000;
+		background: #fa000f;
 		color: #fff;
 		width: 45px;
 		height: 45px;
 		margin-right: -10px;
 	}
+    li.mobile-menu-toggle.active{
+        background: #c00;
+    }
+    li.mobile-menu-toggle.active.opened-submenu{
+        background: #fa000f;
+    }
 	.mobile-menu-toggle .icon-close {
 		display: none;
 		font-size: 26px;

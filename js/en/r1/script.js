@@ -209,8 +209,8 @@ Copyright 2025 Hitachi, Ltd.
             e.preventDefault();
 
             // Close mega menu
-            $('.mega-menu-panel').removeClass('active');
             $('.mega-menu a').removeClass('active');
+            $('.mega-menu-panel').removeClass('active');
 
             // Close mobile menu
             closeMobileMenu();
@@ -242,6 +242,7 @@ Copyright 2025 Hitachi, Ltd.
 
             // Toggle item hiện tại
             $thisItem.toggleClass('active', !isActive);
+            $('.mobile-menu-toggle').addClass('opened-submenu');
         });
 
         // -----------------------------------------------
