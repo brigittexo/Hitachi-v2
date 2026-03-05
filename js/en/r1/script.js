@@ -237,9 +237,6 @@ Copyright 2025 Hitachi, Ltd.
             var $thisItem = $(this).parent();
             var isActive = $thisItem.hasClass('active');
 
-            // Đóng tất cả sibling cùng cấp đang active
-            $thisItem.siblings('li.has-chilrent').removeClass('active');
-
             // Toggle item hiện tại
             $thisItem.toggleClass('active', !isActive);
             $('.mobile-menu-toggle').addClass('opened-submenu');

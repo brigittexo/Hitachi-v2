@@ -39,11 +39,14 @@ Name: common2.css
 	height: 100%;
 }
 .header-top .header-action li a {
-	width: 45px;
 	height: 100%;
+    padding: 0 15px;
 	display: flex;
 	align-items: center;
     justify-content: center;
+}
+.header-top .header-action li.search-toggle a{
+    padding-left: 0;
 }
 .header-top .header-action li a.active,
 .header-top .header-action li a:hover {
@@ -54,7 +57,12 @@ Name: common2.css
 	font-size: 14px;
 	color: #222;
 }
-
+.header-top .header-action li.search-toggle a span{
+    padding-left: 0;
+}
+.header-top .header-action li.search-toggle a img{
+    margin-top: 44px;
+}
 .header-top .header-action li a:hover span {
 text-decoration: none;
 }
@@ -1356,7 +1364,11 @@ color: #000;
 .links-title a:visited{
 color: #000;
 }
-
+.icon-hamburger{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 1024px) {
 	.mega-menu-panel,
 	.header-top .header-action .languages,
@@ -1370,6 +1382,10 @@ color: #000;
 	.header-bottom .col-6:first-child {
 		width: 100%;
 	}
+    .header-top .header-action li a{
+        width: 45px;
+        padding: 0;
+    }
 	li.mobile-menu-toggle {
 		display: flex;
 		align-items: center;
