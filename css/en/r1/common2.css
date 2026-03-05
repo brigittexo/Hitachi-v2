@@ -44,6 +44,7 @@ Name: common2.css
 	display: flex;
 	align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .header-top .header-action li.search-toggle a{
     padding-left: 0;
